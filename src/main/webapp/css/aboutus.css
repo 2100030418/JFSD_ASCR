@@ -1,0 +1,447 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main{
+    width: 100%;
+    background-image: url(../images/back.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: fixed;
+  }
+  
+  .topright {
+  position: absolute;
+  top: 110px;
+  right: 46%;
+  font-size: 18px;
+  width: 8%;
+}
+  
+  .navbar{
+    width: 1535px;
+    height: 75px;	
+    margin: auto;
+    background-color: #333333;
+  }
+  
+  .icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+    cursor:pointer;
+  }
+  
+  .logo{
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+    
+  }
+  
+  .menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+  }
+  
+  ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+    
+  }
+  
+  ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+  }
+  
+  ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+  }
+  
+  ul li a:hover{
+    color: #ff7200;
+  }
+  
+  .search{
+    width: 330px;
+    float: left;
+    margin-left: 400px;
+  }
+  
+  .srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  
+  .btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+  }
+  .btn:hover{
+    color: #000;
+  }
+  
+  .btn:focus{
+    outline: none;
+  }
+  
+  .srch:focus{
+    outline: none;
+  }
+  
+  
+  .main .navbar .icons div{
+    font-size: 3rem;
+    color: #ff7200;
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 6.5rem;
+    cursor: pointer;
+    text-align: end;
+    margin-left: 4%;
+    
+  }
+  
+  
+  
+  .main .navbar .icons div:hover{
+    background-color: var(--black);
+    color:var(--white);
+  }
+  
+  
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap');
+
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  :root{
+      font-size: 62.5%;
+  }
+  
+  html{
+      font-family: 'Roboto Slab', serif;
+      line-height: 1.6;
+  }
+  
+  body{
+      background: linear-gradient(to right, #44a08d, #093637);
+  }
+  
+  
+  .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      gap: 80px;
+      
+  }
+  
+  .card__1{
+      position: relative;
+      width: 350px;
+      height:280px;
+      border-radius: 25px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  
+  .card-color__1{
+      background: #e6dfff;
+  }
+  
+  .card-color__2{
+      background: #dde7c7;
+  }
+  
+  .image{
+      filter: grayscale(1);
+      position: absolute;
+      left: 18%;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      margin: 0 auto;
+      transition: all 1s ease;
+      animation: anim2 1s forwards;
+  }
+  
+  .card__1:hover .image{
+      animation: anim 1s forwards;
+  }
+  
+  @keyframes anim{
+      0%{
+          top: 0;
+          filter: blur(2px);
+          opacity: 0.5;
+          filter: grayscale(1);
+      }
+      100%{
+          top: -40%;
+          filter: grayscale(0);
+      }
+  }
+  
+  @keyframes anim2{
+      0%{
+          top: -40%;
+          filter: blur(2px);
+          opacity: 0.5;
+      }
+      100%{
+          top: 0;
+      }
+  }
+  
+  
+  img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 30px;
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+  
+  /* *************************** content **************************** */
+  
+  .content{
+      position: absolute;
+      top: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  
+  .card__1:hover .content{
+      animation: anim3 1s forwards;
+  }
+  
+  @keyframes anim3{
+      0%{
+          top: 75%;
+          left: 17%;
+      }
+      100%{
+          top: 43%;
+          left: 17%;
+      }
+  }
+  
+  
+  .content h1{
+      position: absolute;
+      width: 100%;
+      top: 0%;
+      left: 30%;
+      text-align: center;
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #2f3e46;
+      text-shadow: 0px -2px 1px rgba(0, 0, 0, 1);
+  }
+  
+  
+  .card__1:hover .content h1{
+      display: none;
+      text-align: center;
+      font-size: 2.5rem;
+  }
+  
+  .content h2{
+      font-size: 2.0rem;
+      font-weight: 700;
+      display: none;
+      color: #354f52;
+      text-transform: uppercase;
+      text-shadow: 0px -1px 1px rgba(21, 28, 32, 1);
+      letter-spacing: 0.1em;
+  }
+  
+  .card__1:hover .content h2{
+      display: block;
+  }
+  
+  .content .btn{
+      display: none;
+      padding: 0.3rem 0.8rem;
+      border: 1px solid #2f3e46;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 1.4rem;
+      color: #2f3e46;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      transition: 0.5s;
+      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  }
+  
+  .content .btn:hover{
+      background: #2f3e46;
+      color: #f5f5f5;
+  }
+  
+  .card__1:hover .content .btn{
+      display: inline-block;
+  }
+  
+  
+  /* *************************** content **************************** */
+  
+  /* ************************** Social Icon ************************** */
+  
+  .social{
+      margin: 10px;
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      cursor: pointer;
+      opacity: 0;
+  }
+  
+  .social i{
+      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  }
+  
+  .card__1:hover .social{
+      opacity: 1 !important;
+  }
+  
+  .social .fa-instagram{
+      color: #d62976;
+      padding: 0.7rem 0.78rem;
+      border-radius: 50px;
+      border: 1px solid #d62976;
+      transition: all 0.3s ease;
+  }
+  .social .fa-instagram:hover{
+      margin-top: -8px;
+      color: #f5f5f5;
+      background: #d62976;
+      border: 1px solid #fff;
+  }
+  
+  .social .fa-twitter{
+      color: #00acee;
+      padding: 0.7rem;
+      border-radius: 50%;
+      border: 1px solid #00acee;
+      transition: all 0.3s ease;
+  }
+  .social .fa-twitter:hover{
+      margin-top: -8px;
+      color: #f5f5f5;
+      background: #00acee;
+      border: 1px solid #fff;
+  }
+  
+  .social .fa-github{
+      color: #3e2d58;
+      padding: 0.7rem 0.72rem;
+      border-radius: 50%;
+      border: 1px solid #3e2d58;
+      transition: all 0.3s ease;
+  }
+  .social .fa-github:hover{
+      margin-top: -8px;
+      color: #f5f5f5;
+      background: #3e2d58;
+      border: 1px solid #fff;
+  }
+  
+  .social .fa-facebook{
+      color: #3b5998;
+      padding: 0.7rem;
+      border-radius: 50%;
+      border: 1px solid #3b5998;
+      transition: all 0.3s ease;
+  }
+  .social .fa-facebook:hover{
+      margin-top: -8px;
+      color: #f5f5f5;
+      background: #3b5998;
+      border: 1px solid #fff;
+  }
+  
+  /* ************************** Social Icon ************************** */
+  
+  
+   .dropdown1 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown1-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown1-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown1-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown1:hover .dropdown1-content {
+            display: block;
+        }
+    

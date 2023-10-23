@@ -1,0 +1,255 @@
+ 
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.login_main{
+    width: 100%;
+  
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+   background-image: url(../images/back.png);
+  
+ }
+.background{
+    width: 430px;
+    height: 400px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 70%;
+}
+
+
+form{
+    height:500px;
+    width: 400px;
+    background-color: rgba(31, 35, 51, 0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 60%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(4, 4, 4, 0.1);
+    box-shadow: 0 0 40px rgba(46, 44, 57, 0.6);
+    padding: 50px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(12, 12, 12, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+.button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
+
+
+.navbar{
+    width: 1535px;
+    height: 75px;
+    margin: auto;
+    background-color: #333333;
+  }
+  
+  .icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+    cursor:pointer;
+  }
+  
+  .logo{
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+    
+  }
+  
+  .menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+  }
+  
+  ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+    
+  }
+  
+  ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+  }
+  
+  ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+  }
+  
+  ul li a:hover{
+    color: #ff7200;
+  }
+  
+  .search{
+    width: 330px;
+    float: left;
+    margin-left: 400px;
+  }
+  
+  .srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  
+  .btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+  }
+  .btn:hover{
+    color: #000;
+  }
+  
+  .btn:focus{
+    outline: none;
+  }
+  
+  .srch:focus{
+    outline: none;
+  }
+ 
+  .login_main .navbar .icons div{
+    font-size: 2rem;
+    color: #ff7200;
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    cursor: pointer;
+    text-align: end;
+    margin-left: 6%;
+    
+  }
+  
+
+  input[type=checkbox] {
+    height: 30px;
+    margin-left: 45%;
+}
+
+    .p{
+        margin-left: 45%;  
+      margin-top: -16px;
+        }
+        
+        
+        
+        
+        
+.dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
