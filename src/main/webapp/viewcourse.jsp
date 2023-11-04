@@ -191,6 +191,7 @@
                         <th>Course Code</th>
                         <th>Faculty</th>
                         <th>Action</th>
+                        <th>Enrolled</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -206,6 +207,7 @@
                                 
                                 <a href="deletecourse/${stud.id}"><button class="register-button">DELETE</button></a>
                             </td>
+                            <td>5</td>
                         </tr>
                     </c:forEach>
                 </tbody>

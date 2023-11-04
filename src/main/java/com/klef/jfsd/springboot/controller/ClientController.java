@@ -1,5 +1,7 @@
 package com.klef.jfsd.springboot.controller;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +24,8 @@ import com.klef.jfsd.springboot.repository.StudentCourseRepository;
 import com.klef.jfsd.springboot.repository.StudentRepository;
 import com.klef.jfsd.springboot.service.AdminService;
 import com.klef.jfsd.springboot.service.CourseData;
+
+import com.klef.jfsd.springboot.service.EmailService;
 import com.klef.jfsd.springboot.service.StudentService;
 
 import jakarta.mail.Session;
@@ -45,6 +49,10 @@ public class ClientController
 
 	    @Autowired
 	    private CoursesRepository coursesRepository;
+	    
+	    @Autowired
+	    private EmailService emailService;
+	    
 	    
 	    
 	    @GetMapping("/")
@@ -171,8 +179,30 @@ public class ClientController
 	    		emp.setContact(contact);
 	    		emp.setActive(true);
 	    		
-	    	msg = 	studentService.addstudent(emp);
 	    	
+	    	
+	    		msg = 	studentService.addstudent(emp);
+	    		String filePath = "C:/Users/91996/Desktop/FRONTEND/invite.html";
+	    		
+	  		  try {
+	  			  
+	  			  String from="plakshminarayanareddy2003@gmail.com";
+	  	            String to = email;
+	  	            String subject = "Welcome to ASCR !!!";
+	  	            String text = "This is the email body with an attachment.";
+	  	            String htmlContent = new String(Files.readAllBytes(Paths.get(filePath)));
+	  	          htmlContent = htmlContent.replace("[name]", name);
+	  	        htmlContent = htmlContent.replace("[password]", dob);
+	  	            
+	  	            
+
+	  	            emailService.sendEmail(from, to, subject, text,htmlContent);
+	  	            //return "Email sent with attachment.";
+	  	        } catch (Exception e) {
+	  	            System.out.println(e);
+	  	        }
+	    	    
+	        
 	    	mv.setViewName("addstudent");
 	    	mv.addObject("message", msg);
 	    	
@@ -245,6 +275,8 @@ public class ClientController
 	    	
 	    	List<Courses> courlist = adminService.viewcourse();
 	    	
+	    	
+	    	
 	    	mv.addObject("courdata", courlist);
 	    	
 	    	
@@ -283,6 +315,9 @@ public class ClientController
 	        } else {
 	            // If "eid" is not set (no session), create CourseData objects for all courses
 	            for (Courses course : allCourses) {
+	            	
+	            	
+	            	
 	                CourseData courseData = new CourseData(course.getId(), course.getCoursename(),course.getCourseid(), course.getFaculty(), false);
 	                courseDataList.add(courseData);
 	            }

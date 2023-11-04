@@ -7,6 +7,7 @@ public class CourseData {
     private String coursecode;
     private String faculty;    // Faculty
     private boolean isRegistered; // Whether the course is registered for the student
+    
 
     // Constructors
     public CourseData(int sid, String coursename,String coursecode, String faculty, boolean isRegistered) {
