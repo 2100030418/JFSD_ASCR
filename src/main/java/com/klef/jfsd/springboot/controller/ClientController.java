@@ -416,6 +416,7 @@ public class ClientController
 	    @GetMapping("delete/{id}")
 	    public String deleteaction(@PathVariable("id") int sid)
 	    {
+	      adminService.delstud(sid);
 	      adminService.deletestudents(sid);
 	      return "redirect:/viewstudent";
 	    }

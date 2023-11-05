@@ -13,6 +13,7 @@ import com.klef.jfsd.springboot.model.Courses;
 import com.klef.jfsd.springboot.model.Student;
 import com.klef.jfsd.springboot.repository.AdminRepository;
 import com.klef.jfsd.springboot.repository.CoursesRepository;
+import com.klef.jfsd.springboot.repository.StudentCourseRepository;
 import com.klef.jfsd.springboot.repository.StudentRepository;
 
 
@@ -27,6 +28,9 @@ public class AdminServiceImpl implements AdminService
         
         @Autowired
         private CoursesRepository coursesRepository;
+        
+        @Autowired
+        private StudentCourseRepository studentCourseRepository;
         
 
 	@Override
@@ -136,6 +140,14 @@ public class AdminServiceImpl implements AdminService
 	    coursesRepository.save(e);
 	    
 	    return "Courses Updated Successfully";
+	}
+
+
+	@Override
+	public void delstud(int sid) {
+		studentCourseRepository.delstud((long) sid);
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

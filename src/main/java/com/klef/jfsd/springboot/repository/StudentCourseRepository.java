@@ -26,6 +26,13 @@ public interface StudentCourseRepository extends JpaRepository<StudentCourse, Lo
     @Query("DELETE FROM StudentCourse sc WHERE sc.courses.id = :studentId")  // Change the parameter name to match :studentId
     void deleteByStudentId(Long studentId);
 	
+	@Modifying
+    @Transactional
+    @Query("DELETE FROM StudentCourse sc WHERE sc.student.id = :studentId")  // Change the parameter name to match :studentId
+    void delstud(Long studentId);
+	
+	
+	
 	
 	
 	

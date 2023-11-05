@@ -20,4 +20,5 @@ public interface StudentService
      //public List<CourseData> getCourseDataForStudent(int studentId);
      public void deleteByStudentId(int studentId);
      public List<StudentCourse> findRegisteredCoursesByStudentId(int studentId);
+     
 }

@@ -18,5 +18,6 @@ public interface AdminService
      public Student viewstudentbyid(int sid);
      public String addcourses(Courses courses);
      public String updatecourses(Courses emp);
+     public void delstud(int sid);
 	
 }
