@@ -58,9 +58,22 @@ public class ClientController
 	    @GetMapping("/")
 	    public String main()
 	    {
-	    	return "main";
+	    	return "studhome";
 	    }
-	    
+	    @GetMapping("/adminhome")
+	    public String admin(HttpServletRequest request)
+	    {
+	    	HttpSession session = request.getSession();
+            String is = (String) session.getAttribute("ename");
+            
+            if(is.equals("admin"))
+            {
+            	return "main";
+            }
+            
+	    	return "login";
+	    	
+	    }
 	    
 	    
 	    @GetMapping("aboutus")
@@ -80,9 +93,18 @@ public class ClientController
 	    	return "contactus";
 	    }
 	    @GetMapping("addcourse")
-	    public String addcourse()
+	    public String addcourse1(HttpServletRequest request)
 	    {
-	    	return "addcourse";
+	    	HttpSession session = request.getSession();
+            String is = (String) session.getAttribute("ename");
+            
+            if(is.equals("admin"))
+            {
+            	return "addcourse";
+            }
+            
+	    	return "login";
+	    	
 	    }
 	    @GetMapping("studhome")
 	    public String studhome()
@@ -97,10 +119,24 @@ public class ClientController
 	    	
 	    	return "studlogin";
 	    }
-	    @GetMapping("addstudent")
-	    public String addstudent()
+	    @GetMapping("login")
+	    public String login()
 	    {
-	    	return "addstudent";
+	    	
+	    	return "login";
+	    }
+	    @GetMapping("addstudent")
+	    public String addstudent(HttpServletRequest request)
+	    {
+	    	HttpSession session = request.getSession();
+            String is = (String) session.getAttribute("ename");
+            
+            if(is.equals("admin"))
+            {
+            	return "addstudent";
+            }
+            
+	    	return "login";
 	    }
 	    
 	    @GetMapping("logout")
@@ -133,8 +169,14 @@ public class ClientController
 	    Admin a = adminService.checkadminlogin(uname, pwd);
 	    
 	    if(a != null)
+	    	
 	    {
-	    	mv.setViewName(main());
+	    	HttpSession session  = request.getSession();
+        	
+        	session.setAttribute("ename", a.getUsername());
+	    	
+	    	
+	    	mv.setViewName(admin(request));
 	    }
 	    else
 	    {
@@ -254,9 +296,18 @@ public class ClientController
 	    }
 	    
 	    @GetMapping("viewstudent")
-	    public ModelAndView viewstudent()
+	    public ModelAndView viewstudent(HttpServletRequest request)
 	    {
 	    	ModelAndView mv = new ModelAndView();
+	    	ModelAndView mv1 = new ModelAndView();
+	    	mv1.setViewName(login());
+	    	HttpSession session = request.getSession();
+            String is = (String) session.getAttribute("ename");
+            
+            if(!is.equals("admin"))
+            {
+            	return mv1;
+            }
 	    	mv.setViewName("viewstudent");
 	    	
 	    	List<Student> studlist = adminService.viewallstudents();
@@ -267,9 +318,19 @@ public class ClientController
 	    }
 	    
 	    @GetMapping( "viewcourse")
-	    public ModelAndView viewcourse()
+	    public ModelAndView viewcourse(HttpServletRequest request)
 	    {
 	    	ModelAndView mv = new ModelAndView();
+	    	ModelAndView mv1 = new ModelAndView();
+	    	mv1.setViewName(login());
+	    	HttpSession session = request.getSession();
+            String is = (String) session.getAttribute("ename");
+            
+            if(!is.equals("admin"))
+            {
+            	return mv1;
+            }
+	    	
 	    	
 	        mv.setViewName("viewcourse");
 	    	
@@ -377,6 +438,7 @@ public class ClientController
 	    public ModelAndView addcourse(HttpServletRequest request)
 	    {
 	    	ModelAndView mv = new ModelAndView();
+	    	
 	    	
 	    	String msg = null;
 	    	

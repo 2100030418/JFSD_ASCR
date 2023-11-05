@@ -18,7 +18,7 @@
 
       <div class="menu">
         <ul>
-          <li><a href="/">HOME</a></li>
+          <li><a href="adminhome">HOME</a></li>
           <li><a href="viewcourse">VIEW&nbsp;COURSES</a></li>
           <li><a href="viewstudent">VIEW&nbsp;STUDENT</a></li>
           <li><a href="addstudent">ADD&nbsp;STUDENT</a></li>
@@ -31,7 +31,7 @@
             <a class="icons2"><div id="user-btn" class="fas fa-user"></div> </a>
             <div class="dropdown-content">
                 <a href="studlogin.jsp">Student Login</a>
-                <a href="studhome.jsp">Logout</a>
+                <a href="logout">Logout</a>
             </div>
         </div>
     </div> 
