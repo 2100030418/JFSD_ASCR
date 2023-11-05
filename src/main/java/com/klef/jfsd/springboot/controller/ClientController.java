@@ -98,7 +98,7 @@ public class ClientController
 	    	HttpSession session = request.getSession();
             String is = (String) session.getAttribute("ename");
             
-            if(is.equals("admin"))
+            if(is != null &&is.equals("admin"))
             {
             	return "addcourse";
             }
@@ -131,7 +131,7 @@ public class ClientController
 	    	HttpSession session = request.getSession();
             String is = (String) session.getAttribute("ename");
             
-            if(is.equals("admin"))
+            if(is != null &&is.equals("admin"))
             {
             	return "addstudent";
             }
@@ -304,15 +304,20 @@ public class ClientController
 	    	HttpSession session = request.getSession();
             String is = (String) session.getAttribute("ename");
             
-            if(!is.equals("admin"))
+            
+            if(is != null && is.equals("admin"))
+            {
+            	mv.setViewName("viewstudent");
+    	    	
+    	    	List<Student> studlist = adminService.viewallstudents();
+    	    	
+    	    	mv.addObject("studdata", studlist);
+            }
+            else
             {
             	return mv1;
             }
-	    	mv.setViewName("viewstudent");
 	    	
-	    	List<Student> studlist = adminService.viewallstudents();
-	    	
-	    	mv.addObject("studdata", studlist);
 	    	
 	    	return mv;
 	    }
@@ -326,20 +331,22 @@ public class ClientController
 	    	HttpSession session = request.getSession();
             String is = (String) session.getAttribute("ename");
             
-            if(!is.equals("admin"))
+            if(is != null && is.equals("admin"))
+            {
+            	mv.setViewName("viewcourse");
+    	    	
+    	    	List<Courses> courlist = adminService.viewcourse();
+    	    	
+    	    	
+    	    	
+    	    	mv.addObject("courdata", courlist);
+            }
+            else
             {
             	return mv1;
             }
 	    	
-	    	
-	        mv.setViewName("viewcourse");
-	    	
-	    	List<Courses> courlist = adminService.viewcourse();
-	    	
-	    	
-	    	
-	    	mv.addObject("courdata", courlist);
-	    	
+	    	    	
 	    	
 	    	return mv;
 	    }
