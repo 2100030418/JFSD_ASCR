@@ -224,11 +224,11 @@ public class ClientController
 	    	
 	    	
 	    		msg = 	studentService.addstudent(emp);
-	    		String filePath = "C:/Users/91996/Desktop/FRONTEND/invite.html";
+	    		String filePath = "src\\main\\webapp\\invite.html";
 	    		
 	  		  try {
 	  			  
-	  			  String from="plakshminarayanareddy2003@gmail.com";
+	  			  String from="manojnulu@gmail.com";
 	  	            String to = email;
 	  	            String subject = "Welcome to ASCR !!!";
 	  	            String text = "This is the email body with an attachment.";
@@ -466,7 +466,7 @@ public class ClientController
 	    		
 	    		msg = 	adminService.addcourses(emp);
 	    	
-	    	mv.setViewName(main());
+	    	mv.setViewName(admin(request));
 	    	mv.addObject("message", msg);
 	    	
 	    	}
@@ -474,7 +474,7 @@ public class ClientController
 	    	{
 				 msg = e.getMessage();
 				 
-				 mv.setViewName("main");
+				 mv.setViewName("addcourse");
 				 mv.addObject("message", msg);
 				 System.out.println(msg);
 			}

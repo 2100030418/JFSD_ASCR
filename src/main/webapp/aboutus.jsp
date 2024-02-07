@@ -50,15 +50,15 @@
     <h1 align="center">Team Members</h1>
     </div>
         <div class="topright">
-    <img alt="" src="../images/team.png">
+    <img alt="" src="./images/team.png">
     
     </div>
     <div class="container">
         
         <div class="card__1 card-color__1">
             <div class="image">
-                <img src="../images/manoj.jpg" alt="">
-            </div>
+                <img src="./images/manoj.jpeg" alt="">
+            </div>  
             <div class="content">
                 <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manoj</h1>
                 <h2>Team Leader</h2>
@@ -73,7 +73,7 @@
         </div>
         <div class="card__1 card-color__2">
             <div class="image">
-                <img src="../images/chinnu.jpg" alt="">
+                <img src="./images/chinnu.jpeg" alt="">
             </div>
             <div class="content">
                 <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chinnu</h1>

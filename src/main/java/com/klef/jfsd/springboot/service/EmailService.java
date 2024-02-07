@@ -31,7 +31,7 @@ public class EmailService {
 		    smm.setText(htmlContent,true);
 		    
 		    
-		    String absoluteFilePath = "C:/Users/91996/Desktop/FRONTEND/logo.png";
+		    String absoluteFilePath = "\\src\\main\\webapp\\images\\logo.jpg";
 
 		    FileSystemResource file = new FileSystemResource(absoluteFilePath);
 		    //smm.addAttachment("login.jpg", file);
